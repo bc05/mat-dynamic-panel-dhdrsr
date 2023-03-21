@@ -1,0 +1,11 @@
+<mat-sidenav-container class="sidenav-container">
+  <router-outlet></router-outlet>
+
+  <!-- this is the sidenav we are concerned with -->
+  <mat-sidenav #rightPanel class="panel" position="end">
+    <!-- <pre><code>{{ (panelService.panelPortal$ | async) | json }}</code></pre> -->
+    <ng-template
+      [cdkPortalOutlet]="panelService.panelPortal | async"
+    ></ng-template>
+  </mat-sidenav>
+</mat-sidenav-container>
